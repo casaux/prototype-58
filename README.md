@@ -1,2 +1,1 @@
-# prototype-58
-Notification of Training Outcome
+# mycasa-3.0-template

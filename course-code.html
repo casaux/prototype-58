@@ -1,0 +1,150 @@
+﻿<!DOCTYPE html>
+<html><head>
+          <meta charset="utf-8">
+      <title>myCASA</title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="viewport" content="initial-scale=1">
+      <link rel="stylesheet" href="../mycasa-src-3.0/css/designsystem.min.css">
+      <link rel="stylesheet" href="../mycasa-src-3.0/css/casa.css">
+      <script type="text/javascript" src="../mycasa-src-3.0/js/designsystem.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src-3.0/js/jquery.min.js"></script>
+      <script type="text/javascript" src="../mycasa-src-3.0/js/jquery.js"></script>
+	  <script type="text/javascript" src="va.js"></script>
+      <script type="text/javascript">
+         /* page specific js */
+
+
+
+      </script>
+      <style type="text/css">
+
+
+      /*autocomplete
+
+      .autocomplete-suggestions {border: none; background: #FFFFFF; overflow: auto;}
+
+      .autocomplete-suggestion{padding:14px;background:#eee;}
+      .autocomplete-suggestion:nth-child(odd){background:#efefef;}*/
+
+      .autocomplete-suggestions { border: 1px solid #999; background: #FFF; overflow: auto; }
+      .autocomplete-suggestion { padding: 4px 5px 2px 16px; white-space: nowrap; overflow: hidden; }
+      .autocomplete-selected { background: #F0F0F0; }
+      .autocomplete-suggestions strong { font-weight: bold;  }
+      .autocomplete-group { padding: 2px 5px; }
+      .autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+      </style>
+
+</head>
+<body class="live-demo au-body au-grid">
+      <main class="au-grid">
+         <div class="header">
+     <div class="container">
+               <div class="row">
+                  <div class="logo au-body au-body--dark">
+                     <a href="index.html"><img src="../mycasa-src/img/CASALOGO-white-i.svg"></a>
+                  </div>
+                  <div class="casa-menu">
+
+                  	<div id="dropdown-menu">
+						<div id="dd-menu"><a class="au-btn au-btn--dark menu" href="#"><img src="../mycasa-src/img/menu.png" height="20" />Menu</a></div>
+						<div id="dd-close"><a class="au-btn au-btn--dark menu" href="#"><img src="../mycasa-src/img/close.png" height="20" />Close</a><br />
+						<br />
+						<p id="mycasa-home"><a href="#">myCASA home</a></p>
+						<p><a href="#">Switch profile</a></p>
+						<p><a href="mycasa-signed-out.html">Sign out</a></p>
+						</div>
+
+
+                  </div>
+               </div></div>
+            </div>
+         </div>
+         <div class="body">
+			<div class="banner">
+				<div class=container>
+					<div class="row">
+					 <div class="col-md-12">
+				This service is currently in beta, we encourage you to <a href="feedback.html">provide feedback</a>
+				</div>
+				</div>
+			</div>
+		</div>
+         <div class="container">
+               <nav class="au-breadcrumbs" aria-label="breadcrumb">
+                  <ul class="au-link-list au-link-list--inline">
+                     <li><a href="dashboard-org.html">myCASA</a></li>
+                     <li>Notification of training outcomes</li>
+                  </ul>
+               </nav>
+			  <div class="casa-section">
+               <header class="au-header" role="banner">
+                  <h1 class="break desktop au-header-heading">Notification of training outcomes</h1>
+                  <a class="au-direction-link" href="javascript:history.back()">
+					<span class="au-direction-link__arrow au-direction-link__arrow--left" aria-hidden="true"></span>Back
+					</a>
+               </header>
+			 </div>
+
+        <div class="row">
+               	<div class="col-xs-12 col-md-12 col-lg-6">
+                    <h3>Notification of training outcomes for category or type</h3>
+
+<div class="au-callout">
+    <h3>Course code</h3>
+                  <p>This notification will cover one course code only, you can add multiple students to one course code. However, if you wish to submit multiple notifications for different course codes, you will need to complete the submission of one course before attempting to notify CASA of another.</p>
+</div>
+
+        <div class="au-form-group">
+        <label class="au-label" for="arn">Course code</label>
+        <div class="autocomplete-suggestions">
+            <input type="text" class="au-text-input au-text-input--block" name="country" id="autocomplete-ajax"/>
+        </div>
+        </div>
+
+
+    <script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery.mockjax.js"></script>
+    <script type="text/javascript" src="js/jquery.autocomplete.js"></script>
+    <script type="text/javascript" src="js/courses.js"></script>
+    <script type="text/javascript" src="js/demo.js"></script>
+
+                    <div class="au-form-group" id="navigate">
+
+				<a class="au-btn" href="#">Next</a>
+
+				</div>
+                 				               <hr />
+            <a href="#" class="au-btn au-btn--secondary">
+            Save and exit application
+            </a>
+                                </div>
+			 </div>
+			 </div>
+		  </div>
+
+                              <div class="footer">
+
+            <div class="footer-wrapper">
+               <iframe src="../mycasa-src/footer.html" frameborder="0" border="0" scrolling="no"></iframe>
+            </div>
+         </div>
+      </main>
+            <script>
+       			  $("#navigate a").click(function(){
+      var textValue = $("#autocomplete-ajax").val();
+      if (textValue == "AA12T") {
+        window.location.href="student-details-theory.html";
+      } else if (textValue == "AA34P"){
+        window.location.href="student-details-prac.html";
+      } else if (textValue == "AA06"){
+        window.location.href="student-details-cat.html";
+    } else if (textValue == "AA01"){
+        window.location.href="student-details-category-training.html";
+      } else if (textValue == "AHD001T/P"){
+        window.location.href="student-details-theory-and-prac.html";
+      }
+ });
+       </script>
+</body>
+</html>
